@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin:0;
+    padding:0; 
+}
+a{
+    color:#000 !important;
+    font-weight: normal!important;
+}
+#init{
+    height: 100%;
+}
+.table{
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: #059;
+}
+.table-cell{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.table-cell img{
+    width:50%;
+}
+.footer-credits{
+    width:100%;
+    text-align: center;
+    position:fixed;
+    bottom:0;
+    color:#f9f9f9;
+    text-shadow: none;
+    font-weight: lighter;
+    padding-bottom:15px;
+}
+.float-right{
+    float:right;
+}
+.float-left{
+    float:left;
+}
+.small-text{
+    font-size:0.8em;
+}
+.no-remove{
+    background-color: #f9f9f9!important;
+}
+#myteam-content{
+    padding-top:5px;
+}
+.min-player-add{
+    width:100%;
+    height: 42px;
+}
+.min-player .ui-icon-plus{
+    margin:7px auto;
+}
+.min-player{
+    display:inline-block;
+    vertical-align: top;
+    width: 45%;
+    padding:10px;
+    margin: 2%;
+}
+.min-player table{
+    width:100%;
+    font-size: 0.8em;
+}
+.min-player-name{
+    font-size:0.8em;
+    color:#059!important;
+}
+.min-player-position{
+    text-align: right;
+}
+.min-player-fpoints{
+    text-align: right;
+}
+.total-fpoints {
+    width:100%;
+    margin:20px 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.total-fpoints a{
+    font-size: 1em!important;
+    font-weight: bold!important;
+    color:#059 !important;
+}
+.ui-header{
+    height: 50px;
+}
+.header-btn{
+    background-color: #f9f9f9;
+    font-weight: bold;
+    vertical-align: middle;
+    width:50%;
+    height: 38px;
+    padding:10px 0;
+    margin-top: 5px;
+    margin-left: 25%;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    color:#059;
+}
+.header-btn-push{
+    background-color: #f9f9f9 !important;
+    border:none!important;
+}
+.footer-btn{
+    vertical-align: middle;
+    display:inline-block;
+    text-align: center;
+    width:30%;
+    margin:0 5px;
+    padding-top:15px;
+    height: 45px;
+    font-weight: bold;
+    background-color: #e9e9e9;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.footer-btn-push{
+    background-color: #f9f9f9 !important;
+    border:none!important;
+}
+#myteam .ui-footer-fixed{
+    border:0px;
+}
+.ui-footer-fixed .ui-icon-minus{
+    float:right;
+    margin: 10px;
+}
+.ui-footer-fixed .ui-icon-check{
+    float:right;
+    margin: 10px;
+    display:none;
+}
+.ui-footer-fixed .ui-icon-refresh{
+    float:left;
+    margin: 10px;
+}
+#player-stats{
+    background-color: #bbb;
+}
+.player-stats{
+    background-color: #f9f9f9;
+    position:fixed;
+    top:10%;
+    left:5%;
+    width:90%;
+    height:350px;
+}
+.player-stats-header{
+    width:100%;
+    height: 80px;
+}
+.player-stats p{
+    margin:5px 0;
+}
+.player-stats-name{
+    text-align: right;
+    padding-right: 20px;
+}
+.player-stats-name a{
+    font-size: 1em !important;
+    font-weight: bold !important;
+    color:#059 !important;
+}
+.player-stats-team{
+    text-align: right;
+    padding-right: 20px;
+}
+.player-stats-position{
+    text-align: right;
+    padding-right: 20px;
+}
+.player-stats-photo{
+    width:90px;
+    margin-left: 10px;
+    float:left;
+    display:block;
+}
+.player-stats table{
+    width:50%;
+    float:left;
+    margin: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+.player-stats-fpoints{
+    margin:180px 0 !important;
+    text-align: center;
+}
+.player-stats-fpoints a{
+    font-weight: bold!important;
+    font-size: 1em!important;
+    color:#059 !important;
+}
+.player-stats-nav{
+    width:100%;
+    margin:10px 5%;
+    position:absolute;
+    bottom:0;
+}
+.player-stats-navbtn{
+    width:35% !important;
+    float: left;
+    margin:0 5%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-shadow: none;
+    color:#000;
+    background-color: #f9f9f9;
+}
+.player-stats-shown{
+    color:#f9f9f9;
+    background-color: #059;
+}
+.player-stats .ui-icon-delete{
+    position:fixed;
+    top: 5px;
+    left:10px;
+}
+.player-list{
+    padding:10px;
+}
+.ui-filterable{
+    padding:5px 10px;
+    padding-bottom: 0;
+}
+#player-list .ui-icon-back{
+    margin: 10px;
+    float: left;
+}
+h1{
+    font-size: 1em;
+    padding:15px;
+    padding-bottom: 0;
+    text-align: center;
+}
+.player-list p{
+    font-size: 1em!important;
+    line-height: 1.3!important;
+    font-family: sans-serif;
+    margin:2px!important;
+}
+.player-list .ui-btn{
+    float:right;
+    margin:5px;
+}
+//Loading
+#inTurnFadingTextG{
+    width:126px;  
+}
+#inTurnFadingTextG_1{
+    margin-left: 40%;
+}
+.inTurnFadingTextG{
+    display:none; 
+    color:rgb(0,85,153);
+    font-family:Arial;
+    font-size:13px;
+    text-decoration:none;
+    font-weight:normal;
+    font-style:normal;
+    float:left;
+    margin-top:0;
+    animation-name:bounce_inTurnFadingTextG;
+    -o-animation-name:bounce_inTurnFadingTextG;
+    -ms-animation-name:bounce_inTurnFadingTextG;
+    -webkit-animation-name:bounce_inTurnFadingTextG;
+    -moz-animation-name:bounce_inTurnFadingTextG;
+    animation-duration:2.09s;
+    -o-animation-duration:2.09s;
+    -ms-animation-duration:2.09s;
+    -webkit-animation-duration:2.09s;
+    -moz-animation-duration:2.09s;
+    animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+    -o-animation-direction:normal;
+    -ms-animation-direction:normal;
+    -webkit-animation-direction:normal;
+    -moz-animation-direction:normal;
+}
+
+#inTurnFadingTextG_1{
+    animation-delay:0.75s;
+    -o-animation-delay:0.75s;
+    -ms-animation-delay:0.75s;
+    -webkit-animation-delay:0.75s;
+    -moz-animation-delay:0.75s;
+}
+#inTurnFadingTextG_2{
+    animation-delay:0.9s;
+    -o-animation-delay:0.9s;
+    -ms-animation-delay:0.9s;
+    -webkit-animation-delay:0.9s;
+    -moz-animation-delay:0.9s;
+}
+#inTurnFadingTextG_3{
+    animation-delay:1.05s;
+    -o-animation-delay:1.05s;
+    -ms-animation-delay:1.05s;
+    -webkit-animation-delay:1.05s;
+    -moz-animation-delay:1.05s;
+}
+#inTurnFadingTextG_4{
+    animation-delay:1.2s;
+    -o-animation-delay:1.2s;
+    -ms-animation-delay:1.2s;
+    -webkit-animation-delay:1.2s;
+    -moz-animation-delay:1.2s;
+}
+#inTurnFadingTextG_5{
+    animation-delay:1.35s;
+    -o-animation-delay:1.35s;
+    -ms-animation-delay:1.35s;
+    -webkit-animation-delay:1.35s;
+    -moz-animation-delay:1.35s;
+}
+#inTurnFadingTextG_6{
+    animation-delay:1.5s;
+    -o-animation-delay:1.5s;
+    -ms-animation-delay:1.5s;
+    -webkit-animation-delay:1.5s;
+    -moz-animation-delay:1.5s;
+}
+#inTurnFadingTextG_7{
+    animation-delay:1.64s;
+    -o-animation-delay:1.64s;
+    -ms-animation-delay:1.64s;
+    -webkit-animation-delay:1.64s;
+    -moz-animation-delay:1.64s;
+}
+
+
+
+
+@keyframes bounce_inTurnFadingTextG{
+    0%{
+        color:rgb(0,85,153);
+    }
+
+    100%{
+        color:rgb(249,249,249);
+    }
+}
+
+@-o-keyframes bounce_inTurnFadingTextG{
+    0%{
+        color:rgb(0,85,153);
+    }
+
+    100%{
+        color:rgb(249,249,249);
+    }
+}
+
+@-ms-keyframes bounce_inTurnFadingTextG{
+    0%{
+        color:rgb(0,85,153);
+    }
+
+    100%{
+        color:rgb(249,249,249);
+    }
+}
+
+@-webkit-keyframes bounce_inTurnFadingTextG{
+    0%{
+        color:rgb(0,85,153);
+    }
+
+    100%{
+        color:rgb(249,249,249);
+    }
+}
+
+@-moz-keyframes bounce_inTurnFadingTextG{
+    0%{
+        color:rgb(0,85,153);
+    }
+
+    100%{
+        color:rgb(249,249,249);
+    }
+}

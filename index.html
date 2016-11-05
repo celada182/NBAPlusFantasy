@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>NBA Plus Fantasy</title>
+    </head>
+    <body>
+        <div data-role="page" id="init">
+            <div class="table">
+                <div class="table-cell">
+                    <img src="img/canal-logo_000.png" alt=""/>
+                </div>
+            </div>
+            <div class="footer-credits">Developed by Javier Celada</div>
+        </div>
+        <div data-role="page" id="myteam">
+            <div data-role="header" class="ui-header">
+                <div class="header-btn header-btn-push">MyTeam</div>
+                <!--<div class="header-btn">Follow</div>-->
+            </div>
+            <div data-role="content" id="myteam-content">
+                <div id="inTurnFadingTextG">
+                    <div id="inTurnFadingTextG_1" class="inTurnFadingTextG">L</div>
+                    <div id="inTurnFadingTextG_2" class="inTurnFadingTextG">o</div>
+                    <div id="inTurnFadingTextG_3" class="inTurnFadingTextG">a</div>
+                    <div id="inTurnFadingTextG_4" class="inTurnFadingTextG">d</div>
+                    <div id="inTurnFadingTextG_5" class="inTurnFadingTextG">i</div>
+                    <div id="inTurnFadingTextG_6" class="inTurnFadingTextG">n</div>
+                    <div id="inTurnFadingTextG_7" class="inTurnFadingTextG">g</div>
+                </div>
+                <div id="player1" class="min-player ui-shadow" onclick="onclick_player(this.id)">
+
+                </div>
+                <div id="player2" class="min-player ui-shadow" onclick="onclick_player(this.id)">
+
+                </div>
+                <div id="player3" class="min-player ui-shadow" onclick="onclick_player(this.id)">
+
+                </div>
+                <div id="player4" class="min-player no-remove ui-shadow" onclick="onclick_empty(this.id)">
+                    <!--                    <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Plus</a>  -->
+                </div>
+                <div id="player5" class="min-player ui-shadow" onclick="onclick_player(this.id)">
+
+                </div>
+                <div id="player6" class="min-player ui-shadow" onclick="onclick_player(this.id)">
+
+                </div>
+                <div id="player7" class="min-player ui-shadow" onclick="onclick_player(this.id)">
+
+                </div>
+                <div id="player8" class="min-player ui-shadow" onclick="onclick_player(this.id)">
+
+                </div>
+                <div id="player9" class="min-player ui-shadow" onclick="onclick_player(this.id)">
+
+                </div>
+                <div id="player10" class="min-player ui-shadow" onclick="onclick_player(this.id)">
+                    <!--                    <table>
+                                            <tr><a class="min-player-name">G.Antetokounmpo</a></tr>
+                                            <tr>
+                                                <td class="min-player-team">MIL</td>
+                                                <td class="min-player-fpoints"><a>33</a><a class="small-text"> FPts</a></td>
+                                            </tr>
+                                        </table>-->
+                </div>
+                <div class="total-fpoints"><a>Fantasy Points: </a></div>
+            </div>
+            <div data-role="footer" class="ui-footer-fixed">
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-refresh ui-btn-icon-notext ui-btn-inline" onclick="onclick_refresh()">Refresh</a>
+                <div class="footer-btn footer-btn-push" id="footer-btn-last">LAST</div>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-minus ui-btn-icon-notext ui-btn-inline" onclick="remove_mode()">Minus</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-notext ui-btn-inline" onclick="remove_mode()">Check</a>
+                <div class="footer-btn float-right" id="footer-btn-week" onclick="onclick_myteam_week()">WEEK</div>
+            </div>
+        </div>
+        <div data-role="page" id="player-stats">
+            <div class="player-stats ui-shadow ui-corner-all">
+                <!--                <a href="#myteam" data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+                                <div class="player-stats-header">
+                                    <image class="player-stats-photo" src="http://stats.nba.com/media/players/230x185/201939.png" alt="player-photo"/>
+                                    <p class="player-stats-name"><a>G.Antetokounmpo</a></p>
+                                    <p class="player-stats-position"><a>F</a></p>
+                <p class="player-stats-team"><a>MIL</a></p>
+                                </div>
+                                <table class="player-stats-table1">
+                                    <tr>
+                                        <td>Pts</td>
+                                        <td>34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reb</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ast</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FGM/A</td>
+                                        <td>8/15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FG3M/A</td>
+                                        <td>5/8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FTM/A</td>
+                                        <td>4/4</td>
+                                    </tr>
+                                </table>
+                                <table class="player-stats-table2">              
+                                    <tr>
+                                        <td>Blk</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stl</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TO</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PF</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TF</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>EJ</td>
+                                        <td>4</td>
+                                    </tr>
+                                </table>
+                                <p class="player-stats-fpoints"><a>25</a><a> FPts</a></p>-->
+            </div>
+            <div class="player-stats-nav">
+                <div class="player-stats-navbtn player-stats-shown" id="player-stats-last">LAST</div>
+                <div class="player-stats-navbtn" id="player-stats-last10" onclick="onclick_week()">WEEK</div>
+            </div>
+        </div>
+        <div data-role="page" id="player-list">
+            <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext ui-btn-inline" onclick="back_btn()">Back</a>
+            <h1>League Players</h1>
+            <ul class="player-list" data-role="listview" data-filter="true" data-filter-placeholder="Search player...">
+                <!--                <li>
+                                    <p>
+                                        <a class="player-list-name">Curry, Stephen</a>
+                                        <a class="player-list-team">GSW</a>
+                                        <a class="player-list-position">Guard</a>
+                                        <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline" onclick="player_list_add()">Plus</a>
+                                        <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-inline" onclick="player_list_stats()">Stats</a>
+                                    </p>   
+                                </li>-->
+            </ul>
+        </div>
+    </body>
+</html>
